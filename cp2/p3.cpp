@@ -20,8 +20,28 @@ int maxMinDiff(int *arr, int N){
 }
 
 int main(){
-    int lista[] = {1, 6, 3, 2, 9, 0};
-    int n = 6;
+    int *lista = new int[1];
+    int n = 0;
+    int arraysize = 1;
+
+
+    while (cin >> lista[n]){
+        n++;
+        if (n >= arraysize){
+            arraysize++;
+            int* temp = new int[arraysize];
+
+            for (int i=0; i<n; i++){
+                temp[i] = lista[i];
+            }
+
+            delete [] lista;
+            lista = temp;
+
+        }
+
+    }
+
 
     cout << maxMinDiff(lista, n) << endl;
 
