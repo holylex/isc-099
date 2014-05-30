@@ -19,30 +19,21 @@ int maxMinDiff(int *arr, int N){
     return max - min;
 }
 
+
+
 int main(){
-    int *lista = new int[1];
-    int n = 0;
-    int arraysize = 1;
+    int n=0;
+    
+    cout << "Introduzca el numero de elementos de la lista: ";
+    cin >> n;
 
+    int *lista = new int[n];
 
-    while (cin >> lista[n]){
-        n++;
-        if (n >= arraysize){
-            arraysize++;
-            int* temp = new int[arraysize];
-
-            for (int i=0; i<n; i++){
-                temp[i] = lista[i];
-            }
-
-            delete [] lista;
-            lista = temp;
-
-        }
-
+    cout << "Introduza los elementos separados por espacios: ";
+    for (int i=0; i<n; i++){
+        cin >> lista[i];
     }
 
-
-    cout << maxMinDiff(lista, n) << endl;
+    cout << "La diferencia es:" << maxMinDiff(lista, n) << endl;
 
 }
