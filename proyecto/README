@@ -1,0 +1,35 @@
+Autor: Alexandre Pérez
+Matrícula: 2005-0427
+
+
+ConnectX
+
+es un juego de dos jugadores que toma lugar en una cuadrícula de n filas x m columnas. Los
+jugadores juegan en turnos. En un turno, un jugador deja caer una bola de su color desde el techo de una
+columna. Esta bola luego se desplaza hacia abajo hasta que se coloque en la primera fila, o encima de la bola
+más cerca del techo de esa columna.
+El juego termina en dos posibles estado:
+EMPATE:
+ocurre cuando se han colocado n x m bolas y no hay x de ellas que estén contiguas en ninguna
+dirección (horizontal, vertical, diagonal izquierda o diagonal derecha).
+GANADOR:
+si luego de colocar una bola de su color, el jugador actual logró formar x bolas contiguas en las
+direcciones establecidas, ganó.
+
+
+El juego utiliza un archivo de configuracion llamado conf.properties
+en este archivo se encuentran 3 variables de configuracion del juego
+N determina el numero de filas
+M determina el numero de columnas
+X El numero de bolas continuas necesarias para ganar
+
+Al iniciar el juego el jugador se le pedira un caracter para nombrar sus bolas
+Luego se le solicitará otro caracter para el 2do jugador.
+Si desea jugar contra la maquina deberá introducir el caracter 'M' para el 2do jugador
+
+
+Problemas encontrados durante el proceso
+la compilacion y el enlace no se sienten muy fluidos de la manera en que lo hice.
+se uso el flag -I. para forzar las dependencias al directorio local
+esto makefile fue probado en debian 7.5 con g++ 4.7.2 y funciona correctamente
+
